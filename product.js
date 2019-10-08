@@ -7,6 +7,5 @@ for (let i = 0; i < itemArray.length; i++) {
     const item = itemArray[i];
     const dom = renderItem(item);
     list.appendChild(dom);
-    console.log(item);
 }
 
