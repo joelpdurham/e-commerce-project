@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../style.css">
+    <title>Shopping Cart</title>
+</head>
+<body>
+    <h1>Cart</h1>
+    <table>
+        <thead>
+            <tr>
+                <th class="align-left">Item</th>
+                <th>Qty</th>
+                <th><img class='rupee' src='../assets/rupee.png'></th>
+                <th><img class='rupee' src='../assets/blue-rupee.png'></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <th>Deku Stick</th>
+            <th>5</th>
+            <th>10</th>
+            <th>50</th>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <th></th>
+                <th></th>
+                <th><img class='rupee' src='../assets/red-rupee.png'></th>
+                <th id="order-total-cell"></th>
+            </tr>
+        </tfoot>
+    </table>
+
+    <button id='placeorder'>Place Order</button>
+
+
+    <script type="module" src='./shopping-cart.js'></script>
+</body>
+</html>
