@@ -115,7 +115,7 @@ const lonLonMilk = {
     price: 40
 };
 
-const itemArray = [
+export const itemArray = [
     dekuStick, 
     bomb, 
     bombchu, 
@@ -130,5 +130,3 @@ const itemArray = [
     fairy, 
     lonLonMilk
 ];
-
-export default itemArray;
