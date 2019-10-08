@@ -8,7 +8,7 @@ export function renderItem(item) {
     li.appendChild(h3);
 
     const img = document.createElement('img');
-    img.src = 'https://gamepedia.cursecdn.com/zelda_gamepedia_en/5/5e/OoT3D_Deku_Stick_Icon.png?version=596132cde651fcb33d1a1c9957c55278';
+    img.src = './assets/' + item.image;
     img.alt = item.name + ' image';
     li.appendChild(img);
 
