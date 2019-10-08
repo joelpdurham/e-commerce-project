@@ -1,0 +1,28 @@
+body {
+    background-color: #000054;
+    color: white;
+    font-family: 'Marcellus';
+}
+
+li {
+    border: solid 2px white;
+    border-radius: 25px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+}
+
+h3 {
+    text-align: center;
+}
+
+img {
+    width: 64px;
+    height: 64px;
+}
+
+p img {
+    width: 12px;
+    height: 21px;
+}

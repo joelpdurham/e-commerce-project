@@ -12,9 +12,15 @@ export function renderItem(item) {
     img.alt = item.name + ' image';
     li.appendChild(img);
 
+    const rupeeImg = document.createElement('img');
+    rupeeImg.src = './assets/rupee.png';
+    rupeeImg.alt = 'rupee';
+
     const p = document.createElement('p');
     p.className = 'price';
-    p.textContent = item.price;
+    p.textContent = ' = ' + item.price;
+
+    p.prepend(rupeeImg);
 
     const button = document.createElement('button');
     button.textContent = 'Add';
