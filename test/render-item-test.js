@@ -25,7 +25,7 @@ test('renders an item', function(assert) {
     const expected = '<tr><td class="deku-stick">Deku Stick</td><td class="quantity">5</td><td class="price">10</td><td class="total-row-cost">50</td></tr>';
     
         
-    const dom = makeTableRow(cartFirstItem);
+    const dom = makeTableRow(dekuStick, cartFirstItem);
     const html = dom.outerHTML;
        
     
