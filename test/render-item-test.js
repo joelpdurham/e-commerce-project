@@ -3,6 +3,7 @@ import { renderItem } from '../products/render-item.js';
 import { cart } from '../shoping-cart/shopping-cart.js';
 import { makeTableRow } from '../shoping-cart/render-line-item.js';
 import { findById } from '../utils.js';
+import { calcLineItem } from '../utils.js';
 
 const test = QUnit.test;
 
@@ -19,7 +20,7 @@ test('renders an item', function(assert) {
     assert.equal(html, expected);
 });
 
-test('renders an item', function(assert) {
+test('renders an item ROW', function(assert) {
     const dekuStick = itemArray[0];
     const cartFirstItem = cart[0];
     
@@ -33,12 +34,23 @@ test('renders an item', function(assert) {
     assert.equal(html, expected);
 });
 
-test('matches order id to api item id', function(assert) {
+test('matches order id to api item id and returns the matching item', function(assert) {
     
     
     const expected = itemArray[0]; 
         
     const result = findById(itemArray, cart[0].item_id);
+    
+    assert.equal(result, expected);
+});
+
+test('returns a total when given a quantity and a price', function(assert) {
+    const item = itemArray[0];
+    const quantity = cart[0].quantity;
+
+    const expected = 50; 
+        
+    const result = calcLineItem(quantity, item.price);
     
     assert.equal(result, expected);
 });
