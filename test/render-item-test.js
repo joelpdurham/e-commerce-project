@@ -2,6 +2,7 @@ import { itemArray } from '../api.js';
 import { renderItem } from '../products/render-item.js';
 import { cart } from '../shoping-cart/shopping-cart.js';
 import { makeTableRow } from '../shoping-cart/render-line-item.js';
+import { findById } from '../utils.js';
 
 const test = QUnit.test;
 
@@ -30,4 +31,14 @@ test('renders an item', function(assert) {
        
     
     assert.equal(html, expected);
+});
+
+test('matches order id to api item id', function(assert) {
+    
+    
+    const expected = itemArray[0]; 
+        
+    const result = findById(itemArray, cart[0].item_id);
+    
+    assert.equal(result, expected);
 });
