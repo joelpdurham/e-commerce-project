@@ -1,9 +1,10 @@
 import { itemArray } from '../api.js';
 import { renderItem } from '../products/render-item.js';
-import { cart } from '../shoping-cart/shopping-cart.js';
+import { cart } from '../api.js';
 import { makeTableRow } from '../shoping-cart/render-line-item.js';
 import { findById } from '../utils.js';
 import { calcLineItem } from '../utils.js';
+import { calcCartTotal } from '../utils.js';
 
 const test = QUnit.test;
 
@@ -51,6 +52,17 @@ test('returns a total when given a quantity and a price', function(assert) {
     const expected = 50; 
         
     const result = calcLineItem(quantity, item.price);
+    
+    assert.equal(result, expected);
+});
+
+test('returns a cart total when given the cart and item array', function(assert) {
+    const item = itemArray[0];
+    const quantity = cart[0].quantity;
+
+    const expected = 240; 
+        
+    const result = calcCartTotal(item, quantity);
     
     assert.equal(result, expected);
 });

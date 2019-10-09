@@ -1,28 +1,19 @@
-import { itemArray } from '../api.js';
+import { itemArray, cart } from '../api.js';
 import { makeTableRow } from './render-line-item.js';
-import { findById } from '../utils.js';
+import { findById, calcLineItem } from '../utils.js';
 
 const cartContents = document.getElementById('cart-import');
-
-export const cart = [{
-    item_id: 'deku-stick',
-    quantity: 5
-}, {
-    item_id: 'keaton-mask',
-    quantity: 1
-}, {
-    item_id: 'lon-lon-milk',
-    quantity: 2
-}, {
-    item_id: 'bomb',
-    quantity: 4
-}];
+const cartTotalContents = document.getElementById('order-total-cell');
+let cartTotal = 0;
 
 for (let i = 0; i < cart.length; i++) {
     const lineRow = cart[i];
+    const quantity = cart[i].quantity;
     const item = findById(itemArray, lineRow.item_id);
     const dom = makeTableRow(item, lineRow);
-
+    cartTotal = cartTotal + calcLineItem(quantity, item.price);
+    
     cartContents.appendChild(dom);
+    cartTotalContents.textContent = cartTotal;
 }
 

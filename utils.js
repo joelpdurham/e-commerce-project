@@ -12,3 +12,9 @@ export function calcLineItem(quantity, price) {
     const total = quantity * price;
     return total;
 }
+
+export function calcCartTotal(item, quantity) {
+    const lineTotal = calcLineItem(item, quantity);
+    let cartTotal = cartTotal + lineTotal;
+    return cartTotal;
+}
