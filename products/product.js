@@ -1,4 +1,4 @@
-import { itemArray } from './items.js';
+import { itemArray } from '../api.js';
 import { renderItem } from './render-item.js';
 
 const list = document.getElementById('items');

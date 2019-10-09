@@ -8,17 +8,17 @@ export function renderItem(item) {
     li.appendChild(h3);
 
     const img = document.createElement('img');
-    img.src = './assets/' + item.image;
+    img.src = '../assets/' + item.image;
     img.alt = item.name + ' image';
     li.appendChild(img);
 
     const rupeeImg = document.createElement('img');
-    rupeeImg.src = './assets/rupee.png';
+    rupeeImg.src = '../assets/rupee.png';
     rupeeImg.alt = 'rupee';
 
     const p = document.createElement('p');
     p.className = 'price';
-    p.textContent = ' = ' + item.price;
+    p.textContent = item.price;
 
     p.prepend(rupeeImg);
 
