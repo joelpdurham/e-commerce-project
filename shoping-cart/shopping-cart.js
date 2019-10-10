@@ -9,15 +9,12 @@ let cartTotal = 0;
 
 let json = localStorage.getItem('CART');
 let cart = JSON.parse(json);
-console.log(cart);
 
 
 if (cart === null) {
     placeOrder.disabled = true;
-    console.log('button off');
 } else if (cart.length > 0) {
     placeOrder.disabled = false;
-    console.log('button on');
     for (let i = 0; i < cart.length; i++) {
         const lineRow = cart[i];
         const quantity = cart[i].quantity;

@@ -1,0 +1,27 @@
+body {
+    background-color: #000054;
+    color: white;
+    font-family: 'Marcellus';
+    width: 800px;
+    margin: auto;
+}
+
+.rupee {
+    width: 12px;
+    height: 21px;
+}
+
+th {
+    font-size: 21px;
+    font-weight: 900;
+}
+
+table {
+    width: 600px;
+    text-align: justify;
+}
+
+tr:hover{
+    background-color: #2196F3;
+}
+
