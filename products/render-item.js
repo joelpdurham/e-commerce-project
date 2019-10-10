@@ -24,7 +24,8 @@ export function renderItem(item) {
 
     const button = document.createElement('button');
     button.textContent = 'Add';
-    button.value = item.id;
+    button.id = item.id;
+    //document.getElementById
     p.appendChild(button);
 
     li.appendChild(p);
