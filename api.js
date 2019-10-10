@@ -106,15 +106,6 @@ const fairy = {
     price: 40
 };
 
-const lonLonMilk = {
-    id: 'lon-lon-milk',
-    name: 'Lon Lon Milk',
-    image: 'lon-lon-milk.png',
-    description: 'Two servings. Each serving refills 6 hearts.',
-    category: 'bottled-item',
-    price: 40
-};
-
 export const itemArray = [
     dekuStick, 
     bomb, 
@@ -127,8 +118,7 @@ export const itemArray = [
     redPotion, 
     greenPotion, 
     bluePotion, 
-    fairy, 
-    lonLonMilk
+    fairy
 ];
 
 export const cart = [{

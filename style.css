@@ -2,6 +2,16 @@ body {
     background-color: #000054;
     color: white;
     font-family: 'Marcellus';
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap
 }
 
 li {
@@ -11,6 +21,7 @@ li {
     display: flex;
     flex-direction: column;
     margin: 15px;
+    background-color: #2196F3;
 }
 
 h3 {
@@ -20,6 +31,16 @@ h3 {
 img {
     width: 64px;
     height: 64px;
+    display: flex;
+    align-self: center;
+
+
+}
+
+.items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .rupee {
@@ -44,4 +65,9 @@ button {
 
 th {
     width: 100px
+}
+
+.price img {
+    width: 14px;
+    height: 21px;
 }

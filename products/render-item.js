@@ -1,3 +1,6 @@
+//import { findById } from '../utils';
+//import { itemArray } from '../api.js';
+
 export function renderItem(item) {
     const li = document.createElement('li');
     li.className = item.category;
@@ -25,10 +28,19 @@ export function renderItem(item) {
     const button = document.createElement('button');
     button.textContent = 'Add';
     button.id = item.id;
-    //document.getElementById
     p.appendChild(button);
 
     li.appendChild(p);
 
     return li;
+}
+
+function aFunctionThatAddsThisProductToCart() {
+    if (!cartinLocalStorage) {
+        let cartinLocalStorage = [];
+    } else {
+        cartString = JSON.parse(cartinLocalStorage);
+    }
+
+    findById(itemArray, item.id);
 }
