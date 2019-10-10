@@ -63,7 +63,7 @@ const spookyMask = {
 
 const bunnyHood = {
     id: 'bunny-hood',
-    name: ',Bunny Hood',
+    name: 'Bunny Hood',
     image: 'bunny-hood.png',
     description: 'Prevents Stalchildren from appearing at night.',
     category: 'mask',
