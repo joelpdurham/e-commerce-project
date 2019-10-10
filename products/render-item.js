@@ -55,35 +55,13 @@ export function renderItem(item) {
         json = JSON.stringify(cart);
         localStorage.setItem('CART', json);
 
-        h3.textContent = item.name + ' - ' + lineItem.quantity;
+        h3.textContent = item.name + ': ' + lineItem.quantity;
     });
 
     p.appendChild(button);
 
-    /*const removeButton = document.createElement('button');
-    removeButton.textContent = 'Remove';
-    removeButton.id = removeButton.id;
-    button.addEventListener('click', () => {
-        let json = localStorage.getItem('CART');
-        let cart;
-
-        let lineItem = findById(cart, item.id);
-
-        if (!lineItem) {
-            alert('Your cart is empty of ' + item.name);
-        } else {
-            lineItem.quantity--;
-        }
-
-        json = JSON.stringify(cart);
-        localStorage.setItem('CART', json);
-
-        h3.textContent = item.name + ' - ' + lineItem.quantity;
-    });*/
-
     
     li.appendChild(p);
-    //li.appendChild(removeButton);
 
     return li;
 }
