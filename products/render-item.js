@@ -1,5 +1,4 @@
-//import { findById } from '../utils';
-//import { itemArray } from '../api.js';
+import { findById } from '../utils.js';
 
 export function renderItem(item) {
     const li = document.createElement('li');
@@ -28,19 +27,63 @@ export function renderItem(item) {
     const button = document.createElement('button');
     button.textContent = 'Add';
     button.id = item.id;
+    button.addEventListener('click', () => {
+        let json = localStorage.getItem('CART');
+        let cart;
+
+        if (json) {
+            cart = JSON.parse(json);
+        }
+        else {
+            cart = [];
+        }
+
+        let lineItem = findById(cart, item.id);
+
+        if (!lineItem) {
+            lineItem = {
+                id: item.id,
+                quantity: 1
+            };
+
+            cart.push(lineItem);
+        }
+        else {
+            lineItem.quantity++;
+        }
+
+        json = JSON.stringify(cart);
+        localStorage.setItem('CART', json);
+
+        h3.textContent = item.name + ' - ' + lineItem.quantity;
+    });
+
     p.appendChild(button);
 
+    /*const removeButton = document.createElement('button');
+    removeButton.textContent = 'Remove';
+    removeButton.id = removeButton.id;
+    button.addEventListener('click', () => {
+        let json = localStorage.getItem('CART');
+        let cart;
+
+        let lineItem = findById(cart, item.id);
+
+        if (!lineItem) {
+            alert('Your cart is empty of ' + item.name);
+        } else {
+            lineItem.quantity--;
+        }
+
+        json = JSON.stringify(cart);
+        localStorage.setItem('CART', json);
+
+        h3.textContent = item.name + ' - ' + lineItem.quantity;
+    });*/
+
+    
     li.appendChild(p);
+    //li.appendChild(removeButton);
 
     return li;
-}
-
-function aFunctionThatAddsThisProductToCart() {
-    if (!cartinLocalStorage) {
-        let cartinLocalStorage = [];
-    } else {
-        cartString = JSON.parse(cartinLocalStorage);
-    }
-
-    findById(itemArray, item.id);
 }
