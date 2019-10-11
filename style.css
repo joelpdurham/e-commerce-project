@@ -1,73 +1,80 @@
 body {
+    margin: 0 auto;
+    max-width: 960px;
     background-color: #000054;
-    color: white;
     font-family: 'Marcellus';
-    width: 800px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin: auto;
+    color: white
 }
 
-ul {
+nav {
+    background-color: #2196F3;
     display: flex;
-    flex-wrap: wrap
+    justify-content: flex-end;
 }
 
-li {
-    border: solid 2px white;
+nav li {
+    border: solid 1px white;
     border-radius: 25px;
-    width: 150px;
+    margin-right: 10px;
+    padding: 3px;
+    color: white;
+    list-style-type: none;
+    text-align: center;
+    padding: 5px;
+    margin: 3px
+}
+
+section {
     display: flex;
     flex-direction: column;
-    margin: 15px;
-    background-color: #2196F3;
+    justify-content: center;
 }
 
-h3 {
-    text-align: center;
+#store-name {
+    height: 250px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    border: dotted 1px white;
+}
+
+footer {
+    background-color: black;
+    height: 200px;
 }
 
 img {
-    width: 64px;
-    height: 64px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#featured {
     display: flex;
-    align-self: center;
-
-
-}
-
-.items {
+    justify-content: space-around;
+    height: 400px;
+    width: 720px;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    align-items: center;
+    border: solid 2px white;
+    border-radius: 25px;
+    background-color: #2196F3;
+    margin: 0 auto;
 }
 
-.rupee {
-    width: 12px;
-    height: 21px;
+#featured img {
+    width: 120px;
+    padding: 30px;
+    border: solid 1px white;
+    background-color: white;
+    border-radius: 55px
 }
 
-#price {
+#about-store {
+    text-align: center;
+    width: 400px;
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    margin: 0 auto;
 }
 
-button {
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-.price {
-    display: flex;
-    justify-content: flex-end;
-}
-
-th {
-    width: 100px
-}
-
-.price img {
-    width: 14px;
-    height: 21px;
-}

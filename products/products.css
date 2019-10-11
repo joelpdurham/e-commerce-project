@@ -1,0 +1,73 @@
+body {
+    background-color: #000054;
+    color: white;
+    font-family: 'Marcellus';
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap
+}
+
+li {
+    border: solid 2px white;
+    border-radius: 25px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    background-color: #2196F3;
+}
+
+h3 {
+    text-align: center;
+}
+
+img {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-self: center;
+
+
+}
+
+.items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.rupee {
+    width: 12px;
+    height: 21px;
+}
+
+#price {
+    display: flex;
+    justify-content: flex-end;
+}
+
+button {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.price {
+    display: flex;
+    justify-content: flex-end;
+}
+
+th {
+    width: 100px
+}
+
+.price img {
+    width: 14px;
+    height: 21px;
+}
