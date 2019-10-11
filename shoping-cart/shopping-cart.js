@@ -13,9 +13,9 @@ let json = localStorage.getItem('CART');
 let cart = JSON.parse(json);
 
 
-if (cart === null) {
+if (!cart) {
     placeOrder.disabled = true;
-} else if (cart.length > 0) {
+} else {
     placeOrder.disabled = false;
     for (let i = 0; i < cart.length; i++) {
         const lineRow = cart[i];
