@@ -1,4 +1,5 @@
 export function makeTableRow(item, order) {
+
     const trContents = document.createElement('tr');
 
     const itemNameCell = document.createElement('td');
