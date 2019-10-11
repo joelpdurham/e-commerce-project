@@ -1,15 +1,6 @@
-let lineCount = 0;
-
 export function makeTableRow(item, order) {
-    let isEven = lineCount % 2;
-    lineCount++;
 
     const trContents = document.createElement('tr');
-    if (isEven === 0) {
-        trContents.className = 'even';
-    } else {
-        trContents.className = 'odd';
-    }
 
     const itemNameCell = document.createElement('td');
     itemNameCell.className = item.id;

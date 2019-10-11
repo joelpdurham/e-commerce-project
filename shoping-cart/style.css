@@ -21,11 +21,11 @@ table {
     text-align: justify;
 }
 
-.even:hover, .odd:hover{
+tbody tr:hover {
     background-color: rgba(33, 149, 243, 0.281);
 }
 
-.even {
+tr:nth-child(2n) {
     background-color: #2196F3;
 }
 

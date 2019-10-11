@@ -6,7 +6,7 @@ export function renderItem(item) {
     li.title = item.description;
 
     const h3 = document.createElement('h3');
-    h3.textContent = item.name
+    h3.textContent = item.name;
     li.appendChild(h3);
 
     const img = document.createElement('img');
